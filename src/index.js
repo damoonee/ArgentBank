@@ -6,7 +6,11 @@ import { configureStore } from "@reduxjs/toolkit";
 import rootReducer from "./redux/reducers"; // Assurez-vous d'avoir le chemin correct
 
 import Home from "./pages/Home";
+import Login from "./pages/Login";
+
 import Footer from "../src/components/Footer";
+import Header from "./components/Header";
+
 import "./index.css";
 
 const store = configureStore({
@@ -20,8 +24,10 @@ root.render(
     <Provider store={store}>
         <React.StrictMode>
             <Router>
+                <Header />
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/login" element={<Login />} />
                 </Routes>
             </Router>
             <Footer />

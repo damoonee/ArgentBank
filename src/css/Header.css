@@ -1,0 +1,11 @@
+.logo-bank {
+    max-width: 100%;
+    width: 200px;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}

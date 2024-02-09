@@ -2,17 +2,16 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
     margin: 0 auto;
     padding: 2.5rem;
     width: 33%;
 }
 
 .feature-item-icon {
+    width: 100px;
     border: 10px solid #00bc77;
     border-radius: 50%;
     padding: 1rem;
-    width: 10rem;
 }
 
 .feature-item-title {
