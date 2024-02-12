@@ -5,7 +5,7 @@ import "../css/Login.css";
 function Login () {
     return (
         <div className="signin-page">
-            <main className="bg-dark">
+            <main className="main bg-dark">
                 <Form />
             </main>
         </div>
