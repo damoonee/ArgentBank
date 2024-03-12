@@ -17,11 +17,11 @@ function Home() {
     return (
         <div className="homepage">
             <main>
-                { /* Returns Banner*/ }
+                { /* Renvoie la bannière*/ }
                 <Banner />
                 <section className="features">
                     <h2 className="sr-only">Features</h2>
-                    {/* Return items from json file witch mal */}
+                    {/* Renvoie les éléments du fichier json*/}
                     {ItemsData.map((data) => (
                         < Item
                             key={data.id}

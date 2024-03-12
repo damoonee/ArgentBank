@@ -1,6 +1,7 @@
 import { GET_USERPROFILE, EDIT_USERNAME, LOGOUT } from "../redux/type.actions"
 
-/* Initial user state */
+
+/* État initial de l'utilisateur */
 const initialState = {
     status: 'VOID',
     userData: {}

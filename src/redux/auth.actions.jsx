@@ -1,5 +1,8 @@
 import { LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT } from "./type.actions";
 
+
+/* Actions d'authentification */
+
 export const loginSucess = (token) => {
     return {
         type: LOGIN_SUCCESS,

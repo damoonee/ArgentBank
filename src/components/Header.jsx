@@ -3,9 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../assets/argentBankLogo.png';
 import { logout } from '../redux/auth.actions';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import "../css/Header.css";
 
 function Header () {
+    
+    /* Met à jour les données utilisateur sur le composant d'en-tête à partir du redux d'état */
     const isConnected = useSelector((state) => state.auth.token);
     const firstname = useSelector((state) => state.user.userData.firstname);
 
@@ -28,7 +32,7 @@ function Header () {
                 {isConnected ? (
                     <div className='connected'>
                         <Link to='/profile'>
-                            <i className='fa-solid fa-2x fa-circle-user' />
+                            <FontAwesomeIcon icon={faUserCircle} className="sign-logo" />   
                             <p>{firstname}</p>
                         </Link>
                         <Link to='/' onClick={logoutHandler}>
@@ -39,7 +43,7 @@ function Header () {
                 ) : (
                     <div className='not-connected'>
                         <Link to='/login' >
-                            <i className="fa-solid fa-circle-user"></i>
+                            <FontAwesomeIcon icon={faUserCircle} className="sign-logo" />
                             <p>Sign In</p>
                         </Link>
                     </div>

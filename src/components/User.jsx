@@ -6,18 +6,20 @@ import "../css/User.css"
 
 function User() {
 
+    /* Met à jour les données utilisateur sur la page de profil à partir de State Redux */
     const token = useSelector((state) => state.auth.token)
     const userData = useSelector((state) => state.user.userData);
-    /* Manages the appearance of the username modification form */
+    /* Gère l'apparence du formulaire de modification du nom d'utilisateur */
     const [display, setDisplay] = useState(true);
-    /* Get username */
+    /* Récupère le nom d'utilisateur */
     const [userName, setUserName] = useState('');
-    /* Handle error message */
+    /* Gérer le message d'erreur */
     const [errorMessage, setErrorMessage] = useState('');
 
     const dispatch = useDispatch();
 
-    /* Asynchronous username update function */
+    
+    /* Fonction de mise à jour asynchrone du nom d'utilisateur */
     const handleSubmitUsername = async (event) => {
         event.preventDefault();
         if (!isValidName(userName)) {
@@ -39,7 +41,7 @@ function User() {
                 const data = await response.json();
                 const username = data.body.userName;
                 /* 
-                    Checking that the query response is indeed retrieved
+                    Vérifier que la réponse à la requête est bien récupérée
                     console.log(data) 
                 */
                 dispatch(updateUsername(username));

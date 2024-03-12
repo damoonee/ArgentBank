@@ -1,6 +1,8 @@
 import React from "react";
 import "../css/Items.css";
 
+/* Fonction composant qui renvoie les éléments de la page d'accueil */
+
 function Item ({ image, descritionImage, title, description }) {
     return (
         <div className="feature-item">
