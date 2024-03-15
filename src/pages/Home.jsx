@@ -2,16 +2,16 @@ import React from "react"
 import Banner from "../components/Banner"
 import Item from "../components/Items"
 import ItemsData from "../data/ItemsData.json"
-import iconChat from "../assets/icon-chat.png"
-import iconMoney from "../assets/icon-money.png"
-import iconSecurity from "../assets/icon-security.png"
+import iconChat from "../assets/icon-chat.webp"
+import iconMoney from "../assets/icon-money.webp"
+import iconSecurity from "../assets/icon-security.webp"
 import "../css/Home.css"
 
 function Home() {
     const imageData = {
-        "icon-chat.png": iconChat,
-        "icon-money.png": iconMoney,
-        "icon-security.png": iconSecurity,
+        "icon-chat.webp": iconChat,
+        "icon-money.webp": iconMoney,
+        "icon-security.webp": iconSecurity,
     }
 
     return (
